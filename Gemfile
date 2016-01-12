@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.5'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'bower-rails'
 
@@ -37,8 +36,15 @@ group :production do
 end
 
 group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
 end
 
 group :development do
