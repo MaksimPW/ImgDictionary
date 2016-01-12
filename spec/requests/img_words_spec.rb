@@ -7,7 +7,7 @@ describe "ImgWordsPages" do
 			expect(page).to have_content('Img Words')
     	end
 	end
-	
+
 	describe "New" do
 	    it "should have the content 'Draw your association with this word'" do
 	    	visit '/img_words/new'

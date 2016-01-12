@@ -38,6 +38,9 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  # Launch Guard in terminal: 'bundle exec guard'
+  # Guard can autostart rspec tests :)
+  gem 'guard-rspec'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -45,12 +48,13 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara'
+  # Notification for Guard etc.
+  gem 'libnotify'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
